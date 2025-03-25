@@ -1,7 +1,7 @@
 module.exports = ({ env }) => ({
   "users-permissions": {
     config: {
-      register: { role: "authenticated" },
+      jwtSecret: env("JWT_SECRET", "DdcoH8pZwsM7fOP+4SOfYQ=="),
     },
   },
 });
