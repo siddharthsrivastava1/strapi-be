@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "authorss",
+  "info": {
+    "singularName": "authors",
+    "pluralName": "authorss",
+    "displayName": "Authors"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Bio": {
+      "type": "blocks"
+    },
+    "Profile_Picture": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::articless.articless",
+      "mappedBy": "category"
+    }
+  }
+}
